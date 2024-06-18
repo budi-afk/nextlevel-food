@@ -2,11 +2,13 @@ import classes from "./meal-grid.module.css";
 import MealItem from "./meal-item";
 
 export default function MealGrid({ meals }) {
-  <ul className={classes.meals}>
-    {meals.map((meal) => {
-      <li key={meal.id}>
-        <MealItem {...meal} />
-      </li>;
-    })}
-  </ul>;
+  return (
+    <ul className={classes.meals}>
+      {meals.map((meal) => (
+        <li key={meal.id}>
+          <MealItem {...meal} />
+        </li>
+      ))}
+    </ul>
+  );
 }
